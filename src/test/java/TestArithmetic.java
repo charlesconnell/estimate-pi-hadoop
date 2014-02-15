@@ -26,12 +26,6 @@ public class TestArithmetic {
   }
 
   @Test
-  public void testBinExp() {
-    Assert.assertEquals(8, Arithmetic.binExp(2, 3));
-    Assert.assertEquals(129140163, Arithmetic.binExp(3, 17));
-  }
-
-  @Test
   public void testFrac() {
     Assert.assertEquals(0.84, Arithmetic.frac(42.84), 0.00000001);
   }

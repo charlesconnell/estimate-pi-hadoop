@@ -6,6 +6,12 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
+/**
+ * One "piece" of input to give to a map task. In our
+ * case, this is a range of numbers. EstimatePiMapper will
+ * be asked to run many times for each InputSplit, to
+ * cover the entire range.
+ */
 public class EstimatorInputSplit implements InputSplit {
 
   private int start;

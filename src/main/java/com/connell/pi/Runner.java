@@ -26,7 +26,10 @@ public class Runner {
 
     job.setNumReduceTasks(1);
 
-    EstimatorInputFormat.setDigits(job, Integer.valueOf(args[0]));
+    // Adjust this to suit your cluster
+    int digits = Integer.valueOf(args[0]);
+    job.setNumMapTasks(digits/1000);
+    EstimatorInputFormat.setDigits(job, digits);
 
     FileOutputFormat.setOutputPath(job, new Path("/tmp/estimate-pi/results/" + System.currentTimeMillis()));
 
